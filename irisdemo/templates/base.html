@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  margin-right: 40px;
+  animation: pulse 2s infinite;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  width: max-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  margin: 20px 0;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  text-align: center;
+  width: 365px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  animation: fadeIn 1s ease-in-out;
+}
+
+button[type="submit"] {
+  width: 200px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+body{
+  background-color: black;
+}
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <img src="C:\Users\91939\Downloads\OIP.jpg" alt="Placeholder Image">
+    <form action="http://127.0.0.1:5000/home" method="GET">
+      <div class="input-group">
+        <label for="s_len">Length of Sepal:</label>
+        <input type="text" id="s_len" name="s_len" placeholder="Enter Length">
+        <label for="p_len">Length of Petal:</label>
+        <input type="text" id="p_len" name="p_len" placeholder="Enter Length">
+      
+        <label for="s_wid">Width of Sepal:</label>
+        <input type="text" id="s_wid" name="s_wid" placeholder="Enter Width">
+        <label for="p_wid">Width of Petal:</label>
+        <input type="text" id="p_wid" name="p_wid" placeholder="Enter Width">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  
+  </div>
+  
+</body>
+</html>
